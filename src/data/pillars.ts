@@ -124,7 +124,7 @@ export const PILLARS: PillarData[] = [
     borderClass: 'border-streets',
     heroButtonSubtitle: 'Faster buses, street safety & everyday walkability',
     intro:
-      'Allston-Brighton is one of the most transit-dependent neighborhoods in New England, yet our main corridors still treat bus riders, pedestrians, and cyclists like an afterthought.',
+      'Allston-Brighton is one of the most transit-dependent neighborhoods in New England, yet our main corridors still treat bus riders, pedestrians, and cyclists as an afterthought.',
     points: [
       {
         id: 'streets-buses',
@@ -169,8 +169,8 @@ export const PILLARS: PillarData[] = [
     borderClass: 'border-culture',
     heroButtonSubtitle: 'Live music, later hours, outdoor dining & artist space',
     intro:
-      'Allston-Brighton thrives on DIY spaces, small venues, late-night bites, and working artists. Restrictive zoning and permitting red tape have choked out music and nightlife. The Community Plan can bring that energy back.',
-    points: [
+        'Allston-Brighton is full of DIY spaces, live music, small venues, late-night bites, and working artists, but only in spite of restrictive zoning and permitting red tape. The Community Plan can reduce these barriers and maintain Allston-Brighton as a place where artist communities and small businesses thrive.',
+      points: [
       {
         id: 'culture-music',
         pillarId: 'culture',

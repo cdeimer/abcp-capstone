@@ -19,7 +19,7 @@ export const SITE_CONFIG = {
   organizationName: 'Boston Planning Department',
 
   /** Target window for the final Allston-Brighton Community Plan release */
-  planReleaseTarget: 'Early 2027',
+  planReleaseTarget: 'early 2027',
 
   /**
    * EMAIL RECIPIENT CONFIGURATION
