@@ -27,8 +27,8 @@ export const SITE_CONFIG = {
    * Multiple emails are automatically joined with commas in mailto: & Gmail links.
    */
   commentRecipients: {
-    to: ['allstonbrightonplan@boston.gov'],
-    cc: [] as string[],
+    to: ['Abcommunityplan@boston.gov'],
+    cc: ['liz.breadon@boston.gov', 'jennifer.roberts@boston.gov'] as string[],
   },
 
   /**
@@ -52,9 +52,9 @@ export const SITE_CONFIG = {
   upcomingMeetings: {
     showBanner: true,
     badgeText: 'PUBLIC INPUT OPEN NOW • PLAN RELEASE: EARLY 2027',
-    headline: 'Final Plan Slated for Early 2027 — Stay Tuned for Public Meetings!',
+    headline: 'Final Plan Slated for Early 2027. Keep an Eye Out for Public Meetings!',
     description:
-      'The Boston Planning Department is drafting zoning and street recommendations right now. Additional public meetings and workshops will happen between now and Early 2027—send a comment today and follow the official project page so you do not miss the next meeting.',
+      'The Boston Planning Department is drafting zoning and street recommendations right now. More public meetings and workshops will happen between now and Early 2027. Send a comment today and follow the official project page so you don’t miss the next meeting.',
     ctaLabel: 'Official ABCP Page & Meeting Updates',
   },
 
@@ -84,7 +84,7 @@ export const SITE_CONFIG = {
       date: 'UPCOMING',
       title: 'Public Meetings & Draft Workshops',
       description:
-        'Stay tuned for public meetings where residents weigh in on draft recommendations before they are locked in.',
+        'Keep an eye out for public meetings where residents weigh in on draft recommendations before they are locked in.',
       status: 'upcoming',
     },
     {
@@ -92,7 +92,7 @@ export const SITE_CONFIG = {
       date: 'EARLY 2027',
       title: 'Final Community Plan Release',
       description:
-        'The final Allston-Brighton Community Plan is slated for release in Early 2027, shaping the neighborhood for decades.',
+        'The final Allston-Brighton Community Plan is scheduled for release in Early 2027.',
       status: 'upcoming',
     },
   ] satisfies TimelineStep[],

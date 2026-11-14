@@ -32,17 +32,17 @@ export const RESIDENT_STATUSES = [
   {
     id: 'student',
     label: 'College / Grad Student',
-    introPhrase: 'As a student living and spending my days in Allston-Brighton',
+    introPhrase: 'As a student living in Allston-Brighton',
   },
   {
     id: 'young-pro',
     label: 'Recent Grad / Young Professional',
-    introPhrase: 'As a young professional who wants to stay and build a life in Allston-Brighton',
+    introPhrase: 'As a young professional hoping to stay in Allston-Brighton',
   },
   {
     id: 'artist-musician',
     label: 'Artist / Musician / Nightlife Worker',
-    introPhrase: 'As a creative and cultural worker rooted in Allston-Brighton',
+    introPhrase: 'As an artist or musician working in Allston-Brighton',
   },
   {
     id: 'local-worker',
@@ -52,7 +52,7 @@ export const RESIDENT_STATUSES = [
   {
     id: 'homeowner-ally',
     label: 'Homeowner Ally',
-    introPhrase: 'As an Allston-Brighton homeowner who wants our neighborhood to welcome everyone',
+    introPhrase: 'As an Allston-Brighton homeowner who supports more housing and better transit',
   },
 ] as const;
 
@@ -79,7 +79,7 @@ export const PILLARS: PillarData[] = [
     borderClass: 'border-housing',
     heroButtonSubtitle: 'Quality options, landlord competition & fewer bank branches',
     intro:
-      'Over 75% of Allston-Brighton residents rent, yet outdated zoning makes building new apartments next to impossible. When housing is scarce, tenants compete for overpriced, poorly maintained apartments—instead of landlords competing for us.',
+      'Over 75% of Allston-Brighton residents rent, yet outdated zoning makes building new apartments next to impossible. When housing is scarce, tenants end up competing for overpriced, poorly maintained apartments instead of landlords competing for us.',
     points: [
       {
         id: 'housing-quality',
@@ -87,7 +87,7 @@ export const PILLARS: PillarData[] = [
         shortLabel: 'More, higher-quality apartment options near transit',
         headline: 'More, higher-quality options',
         description:
-          'Legalize modern mid-rise and multi-family housing near transit corridors so students, recent grads, and families aren’t all fighting over the same crumbling triple-deckers every September 1st.',
+          'Legalize modern, accessible, multi-family housing near transit corridors so students, recent grads, and families aren’t all fighting over the same crumbling apartments every September 1st.',
         emailSentence:
           'We need zoning that allows substantially more, higher-quality multi-family housing near transit so renters are not forced to compete over scarce, aging apartments every September 1st.',
       },
@@ -99,17 +99,17 @@ export const PILLARS: PillarData[] = [
         description:
           'When vacancy rates are near zero, landlords can hike rents and ignore broken heaters because you have nowhere else to go. Building enough homes flips the market so landlords have to compete on price and maintenance to win tenants.',
         emailSentence:
-          'Adding real housing supply is essential to give tenants leverage—forcing landlords to compete for renters with fairer prices and better maintenance rather than exploiting a chronic shortage.',
+          'Adding real housing supply is essential to give tenants leverage, forcing landlords to compete for renters with fairer prices and better maintenance rather than exploiting a chronic shortage.',
       },
       {
         id: 'housing-by-right',
         pillarId: 'housing',
         shortLabel: 'Allow housing & small local retail "by right" (fewer banks/PE coffee chains)',
-        headline: 'Fewer banks & PE coffee chains',
+        headline: 'Fewer banks & national chains',
         description:
-          'Right now, bad things (corporate banks and private-equity coffee chains) are easy to build "by right," while good things (apartments and small local storefronts) take years of variances. Rethink what is allowed by right so housing and indie shops can actually get built.',
+          'Right now, it’s easy to open a corporate bank or chain restaurant "by right," while apartments and small local storefronts get stuck in years of variances. Rethink what is allowed by right so housing and local shops can actually get built.',
         emailSentence:
-          'We must rethink what is allowed "by right" in Allston-Brighton: it should be effortless to build mixed-use housing with small, affordable ground-floor spaces for independent businesses rather than massive commercial footprints that only banks and private-equity coffee chains can lease.',
+          'We must rethink what is allowed "by right" in Allston-Brighton: it should be straightforward to build mixed-use housing with small, affordable ground-floor spaces for independent businesses rather than massive commercial footprints that only banks and chain coffee shops can afford.',
       },
     ],
   },
@@ -117,12 +117,12 @@ export const PILLARS: PillarData[] = [
     id: 'streets',
     title: 'Better transit & safer streets',
     shortTitle: 'Better transit & safer streets',
-    tagline: 'Move people, not just gridlocked cars.',
+    tagline: 'Move people, not just cars.',
     accentColor: '#0057FF',
     bgClass: 'bg-streets',
     textClass: 'text-streets',
     borderClass: 'border-streets',
-    heroButtonSubtitle: 'Faster 57/66/86 buses, street safety & everyday walkability',
+    heroButtonSubtitle: 'Faster buses, street safety & everyday walkability',
     intro:
       'Allston-Brighton is one of the most transit-dependent neighborhoods in New England, yet our main corridors still treat bus riders, pedestrians, and cyclists like an afterthought.',
     points: [
@@ -130,11 +130,11 @@ export const PILLARS: PillarData[] = [
         id: 'streets-buses',
         pillarId: 'streets',
         shortLabel: 'Faster buses with dedicated bus lanes & signal priority (57, 66, 86, 64, 70)',
-        headline: 'Faster buses',
+        headline: 'Faster transit',
         description:
-          'Dedicated bus lanes and transit signal priority on key routes like the 57, 66, 86, 64, and 70—plus upgrades that speed up the B Branch on Comm Ave so buses aren’t trapped behind solo drivers.',
+          'Dedicated bus lanes and transit signal priority on key routes like the 57, 66, 86, 64, and 70, so buses aren’t trapped behind solo drivers.',
         emailSentence:
-          'Please prioritize dedicated bus lanes and transit signal priority for critical routes like the 57, 66, 86, 64, and 70, alongside Green Line improvements, so thousands of daily transit riders stop losing hours to car congestion.',
+          'Please prioritize upgraded bus infrastructure for critical routes like the 57, 66, 86, 64, and 70, alongside Green Line improvements, so thousands of daily transit riders stop losing hours to car congestion.',
       },
       {
         id: 'streets-safety',
@@ -142,9 +142,9 @@ export const PILLARS: PillarData[] = [
         shortLabel: 'Street safety: protected bike lanes & safer intersections',
         headline: 'Street safety',
         description:
-          'Physical protection for bike lanes (not faded paint in the door zone), raised crosswalks, daylighted intersections, and traffic calming on Brighton Ave, Cambridge St, Western Ave, and Market St.',
+          'Physical protection for bike lanes (not just faded paint), raised crosswalks, daylighted corners, and traffic calming throughout the neighborhood.',
         emailSentence:
-          'Our main corridors need physical street safety upgrades—including curb-protected bike lanes, daylighted corners, and raised crosswalks—so walking, rolling, and biking through Allston-Brighton does not feel like a hazard.',
+          'Our main corridors need physical street safety upgrades (protected bike lanes, daylighted corners, raised crosswalks, and more) so walking and biking through Allston-Brighton does not feel like a hazard.',
       },
       {
         id: 'streets-walkability',
@@ -152,9 +152,9 @@ export const PILLARS: PillarData[] = [
         shortLabel: 'Walkability: wider sidewalks, shade trees & pedestrian plazas',
         headline: 'Walkability',
         description:
-          'Wider, unobstructed sidewalks, street trees for summer shade, better lighting for late-night walks home, and pedestrian-friendly plazas around our neighborhood squares.',
+          'Wider, unobstructed sidewalks, street trees for summer shade, better lighting for late-night walks home, and pedestrian-friendly plazas.',
         emailSentence:
-          'The plan should champion everyday walkability with wider sidewalks, street trees, better night lighting, and pedestrian-friendly public plazas in our squares.',
+          'The plan should prioritize everyday walkability with wider sidewalks, street trees, better night lighting, and pedestrian plazas.',
       },
     ],
   },
@@ -167,9 +167,9 @@ export const PILLARS: PillarData[] = [
     bgClass: 'bg-culture',
     textClass: 'text-culture',
     borderClass: 'border-culture',
-    heroButtonSubtitle: 'Live music permitted, later hours, rooftop patios & artist space',
+    heroButtonSubtitle: 'Live music, later hours, outdoor dining & artist space',
     intro:
-      'Allston-Brighton thrives on DIY spaces, small venues, late-night diners, and working artists. Restrictive zoning and permitting red tape have choked out music and nightlife—the Community Plan can bring that energy back.',
+      'Allston-Brighton thrives on DIY spaces, small venues, late-night bites, and working artists. Restrictive zoning and permitting red tape have choked out music and nightlife. The Community Plan can bring that energy back.',
     points: [
       {
         id: 'culture-music',
@@ -177,9 +177,9 @@ export const PILLARS: PillarData[] = [
         shortLabel: 'Live music permitted by-right in commercial corridors',
         headline: 'Live music permitted',
         description:
-          'Allow cafés, bars, bookstores, and community spaces to host live music and small performances by right without prohibitive legal fees or endless licensing hurdles.',
+          'Allow cafés, bars, and bookstores to host live music and small performances by right without prohibitive fees or licensing hurdles.',
         emailSentence:
-          'To keep Allston-Brighton a cultural hub, the plan should permit small and mid-sized live music and performance spaces by right across our commercial districts.',
+          'To keep Allston-Brighton a place where local music can survive, the plan should permit small and mid-sized live music venues by right across our commercial districts.',
       },
       {
         id: 'culture-hours',
@@ -187,19 +187,19 @@ export const PILLARS: PillarData[] = [
         shortLabel: 'Later operating hours for food, coffee & third spaces',
         headline: 'Later operating hours',
         description:
-          'Not everyone works a 9-to-5. Support late-night dining, late-night coffee shops, and welcoming third spaces for students, hospital/service workers, and night owls.',
+          'Not everyone works a 9-to-5. Support late-night dining, late-night coffee shops, and places for students, hospital/service workers, and night owls to hang out.',
         emailSentence:
-          'Please support later operating hours for independent restaurants, late-night cafes, and third spaces so students, service workers, and residents have welcoming places to gather after dark.',
+          'Please support later operating hours for independent restaurants and late-night cafes so students, service workers, and residents have places to grab food or study after 10pm.',
       },
       {
         id: 'culture-patios',
         pillarId: 'culture',
         shortLabel: 'Rooftop patios & outdoor dining without red tape',
-        headline: 'Rooftop patios',
+        headline: 'Outdoor dining',
         description:
-          'Make rooftop patios, courtyard gardens, and sidewalk dining easy to permit so local restaurants and bars can create great outdoor social spaces.',
+          'Make rooftop patios, food trucks, and sidewalk dining easy to permit so local restaurants and bars can create great outdoor social spaces.',
         emailSentence:
-          'Streamlining zoning for rooftop patios and outdoor dining will bring vibrant street life and help neighborhood restaurants thrive.',
+          'Streamlining zoning for rooftop patios and outdoor dining will bring more life to the street and help neighborhood restaurants survive.',
       },
       {
         id: 'culture-artists',
@@ -209,7 +209,7 @@ export const PILLARS: PillarData[] = [
         description:
           'Incentivize affordable rehearsal spaces, maker studios, galleries, and creative storefronts as part of new neighborhood developments.',
         emailSentence:
-          'Finally, the plan must actively protect and create space for art and artists—including affordable rehearsal rooms, maker studios, galleries, and creative ground-floor uses.',
+          'The plan should also protect and create space for art and artists, including affordable rehearsal rooms, maker studios, and creative ground-floor spaces.',
       },
     ],
   },

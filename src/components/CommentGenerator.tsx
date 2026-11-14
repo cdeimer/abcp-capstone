@@ -117,10 +117,10 @@ export default function CommentGenerator() {
     const subject = `${templates[0]} (${spotObj.label})`;
 
     const lines: string[] = [];
-    lines.push(`Dear ${SITE_CONFIG.organizationName} Allston-Brighton Community Plan Team,`);
+    lines.push('Hello Allston-Brighton Community Plan team,');
     lines.push('');
 
-    const introLine = `${statusObj.introPhrase} connected to ${spotObj.label}, I am writing to share my priorities for the Allston-Brighton Community Plan ahead of its ${SITE_CONFIG.planReleaseTarget} release. It is vital that this plan reflects the voices of renters, students, workers, and young residents—not just the small group of homeowners who typically dominate planning processes.`;
+    const introLine = `${statusObj.introPhrase} connected to ${spotObj.label}, I'm writing to share my thoughts on the Allston-Brighton Community Plan ahead of its ${SITE_CONFIG.planReleaseTarget} release. It's important that this plan reflects renters, students, and workers, not just the small group of homeowners who usually show up to planning meetings.`;
     lines.push(introLine);
 
     if (personalNote.trim()) {
@@ -131,7 +131,7 @@ export default function CommentGenerator() {
     if (chosenPoints.length > 0) {
       lines.push('');
       lines.push(
-        'Specifically, I urge the Boston Planning Department to lock the following priorities into the final Community Plan and zoning recommendations:'
+        'Here are the priorities I’d like to see in the final Community Plan and zoning recommendations:'
       );
       lines.push('');
       chosenPoints.forEach((pt) => {
@@ -146,13 +146,13 @@ export default function CommentGenerator() {
 
     lines.push('');
     lines.push(
-      'Allston-Brighton thrives when it is affordable, easy to get around without a car, and welcoming to artists, musicians, and independent businesses. Please deliver a bold plan that allows these good things "by right."'
+      'Please put forward a plan that makes it easier to build housing, move around without a car, and keep local music and small businesses alive.'
     );
     lines.push('');
     lines.push('Sincerely,');
     lines.push(
       userName.trim()
-        ? `${userName.trim()}\n${statusObj.label} — ${spotObj.label}`
+        ? `${userName.trim()}\n${statusObj.label}, ${spotObj.label}`
         : `An Allston-Brighton ${statusObj.label} (${spotObj.label})`
     );
 
@@ -353,7 +353,7 @@ export default function CommentGenerator() {
                       setUserName(e.target.value);
                       setCustomBody(null);
                     }}
-                    placeholder="e.g. Alex Rivera"
+                    placeholder="Your name"
                     className="mt-1.5 w-full border-2 border-ink bg-paper px-3 py-2 font-sans text-sm font-semibold text-ink placeholder:text-ink/40 shadow-zine-sm focus:bg-white focus:outline-none"
                   />
                 </div>
