@@ -1,0 +1,48 @@
+<section class="border-t-4 border-ink bg-paper-dark py-12">
+  <div class="mx-auto flex max-w-5xl flex-col items-start justify-between gap-6 px-4 sm:flex-row sm:items-center sm:px-6">
+    <div>
+      <h2 class="font-display text-2xl font-bold sm:text-3xl">
+        Share with your friends
+      </h2>
+      <p class="mt-1 max-w-xl text-sm font-medium text-ink/80 sm:text-base">
+        City Hall listens when renters, students, and neighbors show up in numbers. Send
+        this page to your roommates or group chat.
+      </p>
+    </div>
+
+    <button
+      type="button"
+      id="share-site-btn"
+      class="zine-btn shrink-0 bg-highlight px-5 py-3 text-sm text-ink"
+    >
+      <span id="share-site-label">Copy Link to Share</span>
+    </button>
+  </div>
+</section>
+
+<footer class="border-t-2 border-ink bg-ink py-6 text-center text-sm font-medium text-paper">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
+    Built by and for Allston-Brighton residents
+  </div>
+</footer>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const shareBtn = document.getElementById('share-site-btn');
+    const shareLabel = document.getElementById('share-site-label');
+    if (!shareBtn || !shareLabel) return;
+
+    shareBtn.addEventListener('click', async () => {
+      const shareUrl = window.location.origin + window.location.pathname;
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        shareLabel.textContent = '✓ Link Copied!';
+        setTimeout(() => {
+          shareLabel.textContent = 'Copy Link to Share';
+        }, 2500);
+      } catch {
+        // Fallback if clipboard API unavailable
+      }
+    });
+  });
+</script>

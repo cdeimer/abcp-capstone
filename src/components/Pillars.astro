@@ -1,0 +1,87 @@
+---
+import { PILLARS } from '../data/pillars';
+---
+
+<div id="pillars" class="divide-y-4 divide-ink">
+  {
+    PILLARS.map((pillar, pillarIndex) => {
+      const sectionBg =
+        pillarIndex % 2 === 0 ? 'bg-paper' : 'bg-paper-dark/60';
+
+      return (
+        <section
+          id={pillar.id}
+          class={`scroll-mt-16 py-14 sm:py-20 ${sectionBg}`}
+        >
+          <div class="mx-auto max-w-5xl px-4 sm:px-6">
+            <!-- Pillar Header -->
+            <div class="reveal-on-scroll flex flex-col justify-between gap-6 border-b-2 border-ink pb-8 lg:flex-row lg:items-end">
+              <div class="max-w-2xl">
+                <div class={`mb-3 h-2.5 w-16 border border-ink ${pillar.bgClass}`} />
+                <h2 class="font-display text-3xl font-bold tracking-tight sm:text-5xl">
+                  {pillar.title}
+                </h2>
+                <p class="mt-2 font-display text-lg font-bold text-ink/80 sm:text-xl">
+                  {pillar.tagline}
+                </p>
+                <p class="mt-3 text-base font-medium leading-relaxed text-ink/90">
+                  {pillar.intro}
+                </p>
+              </div>
+
+              <div class="shrink-0">
+                <button
+                  type="button"
+                  data-select-pillar={pillar.id}
+                  class={`zine-btn px-5 py-3 text-sm text-white ${pillar.bgClass}`}
+                >
+                  <span>Add to my comment</span>
+                  <span aria-hidden="true">↓</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Pillar Breakdown Cards (Headline + Description only) -->
+            <div
+              class={`mt-8 grid gap-6 ${
+                pillar.points.length === 4
+                  ? 'md:grid-cols-2'
+                  : 'md:grid-cols-3'
+              }`}
+            >
+              {pillar.points.map((point) => (
+                <article class="reveal-on-scroll zine-card bg-white p-6">
+                  <h3 class="font-display text-xl font-bold leading-snug sm:text-2xl">
+                    {point.headline}
+                  </h3>
+                  <p class="mt-3 text-sm font-medium leading-relaxed text-ink/85 sm:text-base">
+                    {point.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      );
+    })
+  }
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pillarBtns = document.querySelectorAll('[data-select-pillar]');
+    pillarBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const pillarId = btn.getAttribute('data-select-pillar');
+        if (!pillarId) return;
+        window.dispatchEvent(
+          new CustomEvent('abcp:select-pillar', { detail: { pillarId } })
+        );
+        const commentSection = document.getElementById('comment');
+        if (commentSection) {
+          commentSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,72 @@
+---
+import { SITE_CONFIG } from '../config/site';
+import { PILLARS } from '../data/pillars';
+---
+
+<section class="border-b-4 border-ink bg-paper py-12 sm:py-16">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6">
+    <div class="max-w-3xl">
+      <h1 class="font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl">
+        What do{' '}
+        <span class="inline-block border-2 border-ink bg-highlight px-2.5 py-0.5 shadow-zine-sm">
+          YOU
+        </span>{' '}
+        want to see in Allston-Brighton's future?
+      </h1>
+
+      <div class="mt-6 space-y-4 text-base font-medium leading-relaxed text-ink/90 sm:text-lg">
+        <p>
+          Right now, the <strong>{SITE_CONFIG.organizationName}</strong> is writing the
+          <strong>Allston-Brighton Community Plan (ABCP)</strong>—the master playbook slated for
+          release in <strong>{SITE_CONFIG.planReleaseTarget}</strong> that will decide what can be
+          built, how our streets work, and how late venues can stay open for the next decade+.
+        </p>
+        <p>
+          Over 75% of Allston-Brighton rents, yet city planning meetings are usually dominated by a
+          handful of homeowners who want nothing to change. Explore the three pillars below, stay
+          tuned for{' '}
+          <a
+            href={SITE_CONFIG.links.officialPlanUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-bold underline decoration-2 underline-offset-2 hover:text-culture"
+          >
+            upcoming public meetings
+          </a>
+          , and send your feedback in 60 seconds.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3 Pillar Jump Buttons -->
+    <div class="mt-10 grid gap-5 md:grid-cols-3">
+      {
+        PILLARS.map((pillar) => (
+          <a
+            href={`#${pillar.id}`}
+            class="zine-card-hover group flex flex-col justify-between p-5"
+          >
+            <div>
+              <div class={`h-2 w-12 border border-ink ${pillar.bgClass}`} />
+              <h2 class="mt-4 font-display text-2xl font-bold tracking-tight">
+                {pillar.title}
+              </h2>
+              <p class="mt-2 text-sm font-medium text-ink/80">
+                {pillar.heroButtonSubtitle}
+              </p>
+            </div>
+
+            <div class="mt-5 flex items-center justify-between border-t-2 border-ink pt-3 font-display text-sm font-bold">
+              <span>Explore</span>
+              <span
+                class={`inline-flex h-7 w-7 items-center justify-center border-2 border-ink text-white transition-transform group-hover:translate-x-1 ${pillar.bgClass}`}
+              >
+                ↓
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
