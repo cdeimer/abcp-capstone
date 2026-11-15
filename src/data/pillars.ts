@@ -118,7 +118,7 @@ export const PILLARS: PillarData[] = [
     title: 'Better transit & safer streets',
     shortTitle: 'Better transit & safer streets',
     tagline: 'Move people, not just cars.',
-    accentColor: '#0057FF',
+    accentColor: '#00843D',
     bgClass: 'bg-streets',
     textClass: 'text-streets',
     borderClass: 'border-streets',

@@ -8,7 +8,7 @@ export default {
         'paper-dark': '#F0E9D8',
         ink: '#121212',
         housing: '#FF4D00',
-        streets: '#0057FF',
+        streets: '#00843D',
         culture: '#FF007A',
         highlight: '#FFE600',
         mint: '#00E599',
